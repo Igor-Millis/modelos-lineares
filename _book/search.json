@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Modelos Lineares",
+    "section": "",
+    "text": "Bem-vindos ao meu primeiro quarto book"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introdução",
+    "section": "",
+    "text": "Agradeço mais uma vez por toda disponibilidade, ambição e carinho dispostos por toda a equipe que compõem os projetos organizados pela Curso-R. Vamos mudar a comunidade."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "prefacio.html",
+    "href": "prefacio.html",
+    "title": "3  Prefácio",
+    "section": "",
+    "text": "Agradeço mais uma vez por toda disponibilidade, ambição e carinho dispostos por toda a equipe que compõem os projetos organizados pela Curso-R. Vamos mudar a comunidade."
+  },
+  {
+    "objectID": "pag1.html",
+    "href": "pag1.html",
+    "title": "3  Motivação",
+    "section": "",
+    "text": "Uma das formas de materializar (Marx? 👀) a relação entre duas variáveis e criar predições e brincar com os dados é contruir um modelo linear."
+  },
+  {
+    "objectID": "pag2.html",
+    "href": "pag2.html",
+    "title": "4  Regressão x Classificação",
+    "section": "",
+    "text": "Existem dois tipos de problemas dentro da área que vamos abordar, problemas de regressão e problemas de classificação classificação. A nomeclatura não leva em conta a forma de resolução dos problemas."
+  },
+  {
+    "objectID": "pag2.html#problemas-de-classificação",
+    "href": "pag2.html#problemas-de-classificação",
+    "title": "4  Regressão x Classificação",
+    "section": "4.2 Problemas de Classificação",
+    "text": "4.2 Problemas de Classificação\nY é uma variável categórica\npodemos usar métodos de regressão para problemas de classificação também"
+  },
+  {
+    "objectID": "pag3.html",
+    "href": "pag3.html",
+    "title": "5  Nomeclaturas",
+    "section": "",
+    "text": "Para possibilitar um conteúdo coeso o glosário abaixo vai explicar termos típicos e que serão bastante usados daqui em diante"
+  },
+  {
+    "objectID": "pag3.html#observado-versus-esperado",
+    "href": "pag3.html#observado-versus-esperado",
+    "title": "5  Nomeclaturas",
+    "section": "5.2 Observado versus Esperado",
+    "text": "5.2 Observado versus Esperado\nvalor observado: \\(Y\\) (ou verdade ou truth)\nvalor esperado: Ŷ (ou predição ou estimado ou fitted)"
+  },
+  {
+    "objectID": "pag3.html#erro-ou-resíduo",
+    "href": "pag3.html#erro-ou-resíduo",
+    "title": "5  Nomeclaturas",
+    "section": "5.3 Erro ou Resíduo",
+    "text": "5.3 Erro ou Resíduo\nÉ a relação entre o valor observado e o valor esperado\nEm problemas de regessão: \\(Y -\\) Ŷ\nEm problemas de classificação: \\(log(Ŷ) - log(1-Ŷ)\\)"
+  },
+  {
+    "objectID": "pag3.html#relação-entre-esperado-observado-e-o-modelo",
+    "href": "pag3.html#relação-entre-esperado-observado-e-o-modelo",
+    "title": "7  Nomeclaturas",
+    "section": "7.4 Relação entre Esperado, Observado e o Modelo",
+    "text": "7.4 Relação entre Esperado, Observado e o Modelo\n\\(Ŷ = f(x)\\) que é o valor que a função \\(f\\) retorna\n\\(Ŷ\\) é predição"
+  },
+  {
+    "objectID": "pag3.html#relação-entre-valor-esperado-e-o-modelo",
+    "href": "pag3.html#relação-entre-valor-esperado-e-o-modelo",
+    "title": "5  Nomeclaturas",
+    "section": "5.4 Relação entre Valor Esperado e o Modelo",
+    "text": "5.4 Relação entre Valor Esperado e o Modelo\n\\(Ŷ = f(x)\\)\nŶ é a predição"
+  },
+  {
+    "objectID": "pag4.html",
+    "href": "pag4.html",
+    "title": "6  Inferência e Predição",
+    "section": "",
+    "text": "Para facilitar o entendimento sobre modelos é importante explicitar a diferença entre os objetivos e intenções entre Predição e Inferência"
+  },
+  {
+    "objectID": "pag4.html#inferência",
+    "href": "pag4.html#inferência",
+    "title": "6  Inferência e Predição",
+    "section": "6.2 Inferência",
+    "text": "6.2 Inferência\nEm inferência estamos mais interessado em entender a relação entre as variáveis explicativas X e a variável resposta Y\nObjetivo inferencial:\nQuais preditores são importantes? Qual a relação entre cada preditor e a variável resposta? Qual o efeito da mudança de valor de um dos preditores na variável resposta?\n\nAlguns rechos retirados de Aprendizado de Máquina, Uma Abordagem Estatística página 8."
+  },
+  {
+    "objectID": "pag5.html",
+    "href": "pag5.html",
+    "title": "7  Regressão Linear Simples",
+    "section": "",
+    "text": "Poderíamos escolher uma reta a mão para tentar descrever a relação entre \\(X\\) e \\(Y\\)\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.1.2\n\np <- ggplot(data = mtcars, mapping = aes(x = mpg,\n                                    y = drat))+\n  geom_point()+\n  labs(x=\"mpg\", y=\"drat\",\n       title=\"Reta Escolhida a Mão\")\n  \np + geom_hline(yintercept = 4)\n\n\n\n\nPorém, é possível ver que escolhendo a mão não temos certeza sobre a “eficiência” da reta. Para não lidarmos com esse problema, vamos utilizar o método da regressão linear simples\n\nlibrary(ggplot2)\n\np <- ggplot(data = mtcars, mapping = aes(x = mpg,\n                                    y = drat))+\n  geom_point()+\n  labs(x=\"mpg\", y=\"drat\",\n       title=\"Reta Escolhida pelo Método de Regressão\")\n\np + geom_smooth(method = \"lm\", col = 'lightblue')+\n  labs(title=\"Modelo de Regressão Linear Simples\")\n\n`geom_smooth()` using formula 'y ~ x'"
+  },
+  {
+    "objectID": "pag5.html#o-que-é-esse-método",
+    "href": "pag5.html#o-que-é-esse-método",
+    "title": "7  Regressão Linear Simples",
+    "section": "7.2 O que é esse método",
+    "text": "7.2 O que é esse método\nRegressão linear simples é o método de escolha da melhor reta dentre todas as possíveis de serem escolhidas\n\\(y ≈ β_0+β_1x\\)\nO sinal ≈ pode ser entendido como “\\(y\\) é aproximadamente modelado como …”"
+  },
+  {
+    "objectID": "pag5.html#no-r",
+    "href": "pag5.html#no-r",
+    "title": "7  Regressão Linear Simples",
+    "section": "7.3 No R",
+    "text": "7.3 No R\n\nView(mtcars)\n\nmelhor_reta<- lm(mpg ~ drat, data = mtcars)\nmelhor_reta\n\n\nCall:\nlm(formula = mpg ~ drat, data = mtcars)\n\nCoefficients:\n(Intercept)         drat  \n     -7.525        7.678"
+  },
+  {
+    "objectID": "pag5.html#o-que-garante-que-essa-é-a-melhor-reta",
+    "href": "pag5.html#o-que-garante-que-essa-é-a-melhor-reta",
+    "title": "7  Regressão Linear Simples",
+    "section": "7.4 O que garante que essa é a melhor reta?",
+    "text": "7.4 O que garante que essa é a melhor reta?\nQueremos a reta que erre menos\nUm dos métodos é o Root Mean Squared Error\nRMSE = \\(\\frac{1}{N} \\times \\sqrt{∑(y_i−(β_0+β_1x))^2}\\)\nOu seja, precisamos encontrar o \\(β_1\\) e \\(β_0\\) que retornem o menor valor para RMSE.\nCom \\(β_1\\) e \\(β_0\\) sendo\n\\(β_1 = \\frac{∑(x_i−x)(y_i−y)}{∑(x_i-x)2}\\)\n\\(β_0=y−β_1x\\)\nEsse \\(β_0\\) e \\(β_1\\) vieram de um método conhecido como Erro Quadrático Médio. E já que vieram do EQM, podemos chamar \\(β_0\\) e \\(β_1\\) de Estimadores do Mínimos Quadrados."
+  },
+  {
+    "objectID": "pag2.html#problemas-de-regerssão",
+    "href": "pag2.html#problemas-de-regerssão",
+    "title": "4  Regressão x Classificação",
+    "section": "4.1 Problemas de regerssão",
+    "text": "4.1 Problemas de regerssão\nY é uma variável contínua"
+  },
+  {
+    "objectID": "pag3.html#gerais",
+    "href": "pag3.html#gerais",
+    "title": "5  Nomeclaturas",
+    "section": "5.1 Gerais",
+    "text": "5.1 Gerais\n\\(x_1, x_2, x_3, …, x_n\\) são variáveis explicativas (ou features, ou preditores)\n\\(X\\) é o conjunto de todas as features (\\(x_1, x_2, …, x_n\\))\n\\(Y\\) é a variável respota (ou dependente)\n\\(Ŷ\\) é o valor esperado (ou predição ou valor estimado)\n\\(f(x)\\) é o modelo ou hipótese"
+  },
+  {
+    "objectID": "pag4.html#predição",
+    "href": "pag4.html#predição",
+    "title": "6  Inferência e Predição",
+    "section": "6.1 Predição",
+    "text": "6.1 Predição\nEm muitas situações X está disponível facilmente mas, Y não é fácil de descobrir. (Ou mesmo não é possível descobrí-lo). Queremos que Ŷ = \\(f(x)\\) seja uma boa estimativa.\nObjetivo preditivo:\nComo podemos criar uma função que tenha bom poder preditivo? Isto é, como criar essa função tal que, dadas novas observações , tenhamos ainda bons resultados"
+  },
+  {
+    "objectID": "pag6.html",
+    "href": "pag6.html",
+    "title": "8  Teste de Hipótese e Valor-p",
+    "section": "",
+    "text": "Hipótese do pesquisador:\n\n“Assassinatos não estão relacionados com a proporção de população urbana de uma cidade.”\n\nTradução da hipótese em termos matemáticos:\n\\(H_0:β_1=0\\) vs \\(H_1:β_1≠0\\)\nSe a hipótese for verdade, então o \\(β_1\\) deveria ser zero. Porém, os dados disseram que \\(β_1=0.02\\).\n0.02 é diferente de 0.00?\nSaída do R\n\n## \n## Call:\n## lm(formula = Murder ~ UrbanPop, data = USArrests)\n## \n## Residuals:\n##    Min     1Q Median     3Q    Max \n## -6.537 -3.736 -0.779  3.332  9.728 \n## \n## Coefficients:\n##             Estimate Std. Error t value Pr(>|t|)  \n## (Intercept)  6.41594    2.90669   2.207   0.0321 *\n## UrbanPop     0.02093    0.04333   0.483   0.6312  \n## ---\n## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n## \n## Residual standard error: 4.39 on 48 degrees of freedom\n## Multiple R-squared:  0.00484,    Adjusted R-squared:  -0.01589 \n## F-statistic: 0.2335 on 1 and 48 DF,  p-value: 0.6312"
+  },
+  {
+    "objectID": "pag5.html#o-que-é-ser-a-melhor-reta",
+    "href": "pag5.html#o-que-é-ser-a-melhor-reta",
+    "title": "7  Regressão Linear Simples",
+    "section": "7.4 O que é ser a melhor reta?",
+    "text": "7.4 O que é ser a melhor reta?\nQueremos a reta que erre menos\nUm dos métodos é o Root Mean Squared Error\nRMSE = \\(\\frac{1}{N} \\times \\sqrt{∑(y_i−(β_0+β_1x))^2}\\)\nOu seja, precisamos encontrar o \\(β_1\\) e \\(β_0\\) que retornem o menor valor para RMSE.\nCom \\(β_1\\) e \\(β_0\\) sendo\n\\(β_1 = \\frac{∑(x_i−x)(y_i−y)}{∑(x_i-x)2}\\)\n\\(β_0=y−β_1x\\)\nEsse \\(β_0\\) e \\(β_1\\) vieram de um método conhecido como Erro Quadrático Médio. E já que vieram do EQM, podemos chamar \\(β_0\\) e \\(β_1\\) de Estimadores do Mínimos Quadrados."
+  }
+]
